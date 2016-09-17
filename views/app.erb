@@ -4,8 +4,8 @@
   <input type="submit" value="Guess!">
 </form>
 
-<% if player_guess %>
-  <p>SECRET WORD IS: <%= secret_word %></p>
-  <p><%= player_guess %></p>
-  <p><%= result %></p>
+<% if @secret_word %>
+  <p><%= @secret_word %></p> 
+  <p><%= @result_display %></p>
 <% end %>
+
