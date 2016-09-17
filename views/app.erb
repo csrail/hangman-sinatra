@@ -1,2 +1,12 @@
-<p>from app.erb</p>
-<p><%= word_bank %></p>
+<form class="" action="/" method="POST">
+  <label for="guess">Player Guess:</label>
+  <input autofocus type="text" name="guess">
+  <input type="submit" value="Guess!">
+</form>
+
+<% if testing %>
+  <p>SECRET WORD IS: <%= secret_word %></p>
+  <p><%= testing %></p>
+  <p><%= feedback1 %></p>
+  <p><%= feedback2 %></p>
+<% end %>
