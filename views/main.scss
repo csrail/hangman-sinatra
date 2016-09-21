@@ -78,9 +78,9 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .samus__div {
   background: url('/images/start/samus-aran.png') no-repeat center center;
-  background-size: cover;
-  width: 10vw;
-  height: 20vw;
+  background-size: contain;
+  width: 16%;
+  height: 20%;
   margin: auto;
   margin-top: 36px;
   animation-name: elevator-descending;
@@ -92,9 +92,10 @@ body {
 .elevator__div {
   position: relative;
   background: url('/images/start/elevator.png') no-repeat center center;
-  background-size: cover;
-  width: 12vw;
-  height: 1.2vw;
+  background-size: contain;
+  background-color: red;
+  width: 20%;
+  height: 2%;
   margin: auto;
 }
 
@@ -109,22 +110,24 @@ body {
 /* Press Start
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .game-state__paragraph {
+  background-color: transparent;
   position: relative;
-  top: 1em;
+  top: 10%;
   text-align: center;
   color: red;
   text-shadow: 2px 2px #333;
   font-size: 2em;
   font-family: press-start;
   line-height: 1.2em;
+  z-index: 2;
 }
 
 /* Press Start
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.press-start__form--ceres-station {
+.invite__form {
   width: 100%;
   display: block;
-  bottom: 50px;
+  bottom: 5%;
   text-align: center;
   position: fixed;
   left: 0;
@@ -134,19 +137,18 @@ body {
   animation-iteration-count: infinite;
 }
 
-.press-start__input--ceres-station {
+.invite__input {
   white-space: normal;
   cursor: pointer;
   width: 100%;
   background-color: transparent;
   border: none;
   color: red;
+  padding: 5% 0;
   text-shadow: 2px 2px #333;
   font-size: 2em;
   font-family: press-start;
   font-weight: bold;
-  padding: 2em 0;
-  line-height: 1.2em;
 }
 
 
@@ -163,23 +165,23 @@ body {
 /* Save Successful
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.save-successful__figure {
+.wait-screen__figure--save-successful {
   position: relative;
-  background: url('/images/win/metroid.gif') no-repeat center;
-  background-size: cover;
-  top: 10em;
-  width: 100px;
-  height: 100px;
-  margin: auto;
+  background: url('/images/win/wait-screen--win1.jpg') no-repeat center;
+  background-size: contain;
+  min-width: 1px;
+  height: 100%;
+  
 }
 
 /* Game Over
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.gameover__figure {
+.wait-screen__figure--gameover {
   background: url('/images/lose/samus.jpg') no-repeat center center;
+  background-size: cover;
   min-width: 1px;
-  height: 750px;
-  margin-top: 2em;
+  height: 80%;
+  margin-top: 5%;
 }
 
 
@@ -189,26 +191,27 @@ body {
   #MEDIA - 1300px
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
-@media only screen and ( max-width: 1365px ) {
-  
-/*---------------------------------
 
-  #SECTION - #Start
-
----------------------------------*/
-
-/* Samus
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.samus__div {
-  width: 137.5px;
-  height: 274px;
-}
-
-/* Elevator
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.elevator__div {
-  width: 160px;
-  height: 20px;
-}
-
-}
+// @media only screen and ( max-width: 1365px ) {
+//   
+// /*---------------------------------
+// 
+//   #SECTION - #Start
+// 
+// ---------------------------------*/
+// 
+// /* Samus
+//   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+// .samus__div {
+//   width: 137.5px;
+//   height: 274px;
+// }
+// 
+// /* Elevator
+//   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+// .elevator__div {
+//   width: 160px;
+//   height: 20px;
+// }
+// 
+// }

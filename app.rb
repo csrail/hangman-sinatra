@@ -57,14 +57,14 @@ end
 
 get '/you_win' do
   session[:game_state] = "SAVE SUCCESSFUL"
-  session[:wait_screen] = "save-successful__figure"
+  session[:wait_screen] = "wait-screen__figure--save-successful"
   session[:invite] = "KEEP PLAYING?"
   erb :win
 end
 
 get '/you_lose' do
   session[:game_state] = "GAME OVER"
-  session[:wait_screen] = "gameover__figure"
+  session[:wait_screen] = "wait-screen__figure--gameover"
   session[:invite] = "TRY AGAIN?"
   erb :lose
 end
