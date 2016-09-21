@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
+require 'sass'
+
 
 use Rack::Session::Cookie#, :expire_after => 0
 
