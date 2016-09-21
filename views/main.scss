@@ -32,9 +32,9 @@ body {
 
 ---------------------------------*/
 
-@keyframes elevator-descending {
+@keyframes elevator-descending--max {
   from {margin-top: -400px; }
-  to   {margin-top:   36px; }
+  to   {margin-top:   3em; }
 }
 
 @keyframes flicker-animation {
@@ -65,25 +65,24 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .backdrop__section--ceres-station {
-  background: url('/images/start/ceres-station-start.png') no-repeat center top;
-  background-size: cover;
+  background: url('/images/start/ceres-station__backdrop--maximum.png') no-repeat center top;
   min-width: 1px;
-  height: 100%;
+  height: 900px;
   position: relative;
-  background-color: #0d0d0d;
+  background-color: #000;
   overflow: hidden;
 }
 
 /* Samus
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .samus__div {
-  background: url('/images/start/samus-aran.png') no-repeat center center;
+  background: url('/images/start/samus-aran.png') no-repeat center top;
   background-size: contain;
-  width: 16%;
-  height: 20%;
+  width: 120px;
+  height: 240px;
   margin: auto;
-  margin-top: 36px;
-  animation-name: elevator-descending;
+  margin-top: 3em;
+  animation-name: elevator-descending--max;
   animation-duration: 3s;
 }
 
@@ -92,12 +91,14 @@ body {
 .elevator__div {
   position: relative;
   background: url('/images/start/elevator.png') no-repeat center center;
-  background-size: contain;
-  background-color: red;
-  width: 20%;
-  height: 2%;
+  background-size: cover;
+  
+  width: 160px;
+  height: 22.6px;
   margin: auto;
 }
+
+
 
 
 
@@ -155,23 +156,21 @@ body {
 
 
 
-
 /*---------------------------------
 
   #FIGURE - #Start
 
 ---------------------------------*/
 
-/* Save Successful
+/* MISSION SUCCESS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.wait-screen__figure--save-successful {
+.wait-screen__figure--mission-success {
   position: relative;
   background: url('/images/win/wait-screen--win1.jpg') no-repeat center;
   background-size: contain;
   min-width: 1px;
   height: 100%;
-  
 }
 
 /* Game Over
@@ -183,35 +182,3 @@ body {
   height: 80%;
   margin-top: 5%;
 }
-
-
-
-/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  #MEDIA - 1300px
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
-
-// @media only screen and ( max-width: 1365px ) {
-//   
-// /*---------------------------------
-// 
-//   #SECTION - #Start
-// 
-// ---------------------------------*/
-// 
-// /* Samus
-//   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-// .samus__div {
-//   width: 137.5px;
-//   height: 274px;
-// }
-// 
-// /* Elevator
-//   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-// .elevator__div {
-//   width: 160px;
-//   height: 20px;
-// }
-// 
-// }

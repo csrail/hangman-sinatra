@@ -56,8 +56,8 @@ post '/' do
 end
 
 get '/you_win' do
-  session[:game_state] = "SAVE SUCCESSFUL"
-  session[:wait_screen] = "wait-screen__figure--save-successful"
+  session[:game_state] = "MISSION SUCCESS"
+  session[:wait_screen] = "wait-screen__figure--mission-success"
   session[:invite] = "KEEP PLAYING?"
   erb :win
 end
