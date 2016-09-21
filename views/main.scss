@@ -33,7 +33,7 @@ body {
 ---------------------------------*/
 
 @keyframes elevator-descending--max {
-  from {margin-top: -400px; }
+  from {margin-top: -800px; }
   to   {margin-top:   3em; }
 }
 
@@ -67,7 +67,7 @@ body {
 .backdrop__section--ceres-station {
   background: url('/images/start/ceres-station__backdrop--maximum.png') no-repeat center top;
   min-width: 1px;
-  height: 900px;
+  height: 100%;
   position: relative;
   background-color: #000;
   overflow: hidden;
@@ -83,7 +83,7 @@ body {
   margin: auto;
   margin-top: 3em;
   animation-name: elevator-descending--max;
-  animation-duration: 3s;
+  animation-duration: 7s;
 }
 
 /* Elevator
@@ -128,7 +128,7 @@ body {
 .invite__form {
   width: 100%;
   display: block;
-  bottom: 5%;
+  top: 50%;
   text-align: center;
   position: fixed;
   left: 0;
@@ -136,6 +136,7 @@ body {
   animation-name: flicker-animation;
   animation-duration: 3.6s;
   animation-iteration-count: infinite;
+  z-index: 10;
 }
 
 .invite__input {
