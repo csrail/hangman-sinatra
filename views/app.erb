@@ -1,11 +1,29 @@
-<form class="" action="/" method="POST">
-  <label for="guess">Player Guess:</label>
-  <input autofocus type="text" name="guess">
-  <input type="submit" value="Guess!">
-</form>
+<%= session[:response] %>
+
 
 <% if @secret_word %>
+  <form class="" action="/" method="POST">
+    <label for="guess">Player Guess:</label>
+    <input autofocus type="text" name="guess">
+    <input type="submit" value="Guess!">
+  </form>
+
   <p><%= @secret_word %></p> 
   <p><%= @result_display %></p>
+  <p>Correct Guess History: <%= @correct_guess_history %></p>
+  <p>Incorrect Guess History: <%= @incorrect_guess_history %></p>
+  <p><%= session[:guesses_left] %></p>
+<% end %>
+
+<% if @guesses_left == 0 %>
+  <p>You lose!</p>
+  <form class="" action="/newgame" method="GET">
+    <input type="submit" value="Play Again?">
+  </form>
+<% elsif @secret_word == @result_display %>
+  <p>You win!</p>
+  <form class="" action="/newgame" method="GET">
+    <input type="submit" value="Play Again?">
+  </form>
 <% end %>
 
