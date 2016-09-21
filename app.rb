@@ -57,7 +57,7 @@ end
 
 get '/you_win' do
   session[:game_state] = "SAVE SUCCESSFUL"
-  session[:wait_screen] = ""
+  session[:wait_screen] = "save-successful__figure"
   session[:invite] = "KEEP PLAYING?"
   erb :win
 end

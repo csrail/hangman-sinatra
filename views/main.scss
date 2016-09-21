@@ -53,6 +53,8 @@ body {
      src: url('/fonts/press-start.ttf');
 }
 
+
+
 /*---------------------------------
 
   #SECTION - #Start
@@ -66,7 +68,7 @@ body {
   background: url('/images/start/ceres-station-start.png') no-repeat center top;
   background-size: cover;
   min-width: 1px;
-  height: 877px;
+  height: 100%;
   position: relative;
   background-color: #0d0d0d;
   overflow: hidden;
@@ -88,12 +90,14 @@ body {
 /* Elevator
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .elevator__div {
+  position: relative;
   background: url('/images/start/elevator.png') no-repeat center center;
   background-size: cover;
   width: 12vw;
   height: 1.2vw;
   margin: auto;
 }
+
 
 
 /*---------------------------------
@@ -120,7 +124,7 @@ body {
 .press-start__form--ceres-station {
   width: 100%;
   display: block;
-  bottom: 100px;
+  bottom: 50px;
   text-align: center;
   position: fixed;
   left: 0;
@@ -156,11 +160,23 @@ body {
 
 ---------------------------------*/
 
+/* Save Successful
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.save-successful__figure {
+  position: relative;
+  background: url('/images/win/metroid.gif') no-repeat center;
+  background-size: cover;
+  top: 10em;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
 /* Game Over
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .gameover__figure {
-  background: url('/images/gameover/samus.jpg') no-repeat center center;
-  background-position: cover;
+  background: url('/images/lose/samus.jpg') no-repeat center center;
   min-width: 1px;
   height: 750px;
   margin-top: 2em;

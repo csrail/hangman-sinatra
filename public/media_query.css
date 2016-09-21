@@ -5,6 +5,7 @@
 ============================ */
 
 .media-query__div:after {
+  pointer-events: none;
   z-index: 1000;
   position: fixed;
   width: 100%;
