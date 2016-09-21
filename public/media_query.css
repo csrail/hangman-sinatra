@@ -1,0 +1,74 @@
+/* ============================
+    
+    Media Query - Reporter
+    
+============================ */
+
+.media-query__div:after {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  bottom: 100px;
+  opacity: 0.5;
+  text-align: center;
+  font-size: 200%;
+  background-color: #9ecdff;
+  content: "width < 320px"
+}
+
+@media only screen and ( min-width: 320px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "320px < width < 480px";
+  }
+}
+
+@media only screen and ( min-width: 480px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "480px < width < 768px";
+  }
+}
+
+@media only screen and ( min-width: 768px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "768px < width < 910px";
+  }
+}
+
+@media only screen and ( min-width: 910px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "910px < width < 1024px";
+  }
+}
+
+@media only screen and ( min-width: 1024px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "1024px < width < 1280px";
+  }
+}
+
+@media only screen and ( min-width: 1190px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "1190px < width < 1280px";
+  }
+}
+
+@media only screen and ( min-width: 1280px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "1280px < width < 1366px";
+  }
+}
+
+@media only screen and ( min-width: 1366px ) {
+  .media-query__div:after {
+    background-color: #9ecdff;
+    content: "width > 1366px";
+  }
+}
