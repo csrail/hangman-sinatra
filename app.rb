@@ -19,7 +19,9 @@ get '/' do
 end
 
 get '/start' do
-  
+  session[:game_state] = ""
+  session[:wait_screen] = ""
+  session[:invite] = "PRESS START"
   erb :start
 end
 
@@ -54,10 +56,16 @@ post '/' do
 end
 
 get '/you_win' do
+  session[:game_state] = "SAVE SUCCESSFUL"
+  session[:wait_screen] = ""
+  session[:invite] = "KEEP PLAYING?"
   erb :win
 end
 
 get '/you_lose' do
+  session[:game_state] = "GAME OVER"
+  session[:wait_screen] = "gameover__figure"
+  session[:invite] = "TRY AGAIN?"
   erb :lose
 end
 

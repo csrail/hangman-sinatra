@@ -1,3 +1,7 @@
+<p class="game-state__paragraph"><%= session[:game_state] %></p>
+
+<figure class="<%= session[:wait_screen] %>"></figure>
+
 <form class="press-start__form--ceres-station" action="/newgame" method="GET">
-  <input class="press-start__input--ceres-station" type="submit" value="PRESS START">
+  <input class="press-start__input--ceres-station" type="submit" value="<%= session[:invite] %>">
 </form>
