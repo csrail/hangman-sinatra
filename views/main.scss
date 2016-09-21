@@ -34,7 +34,7 @@ body {
 
 @keyframes flicker-animation {
   0%   { opacity:0; }
-  50%  { opacity:1; }
+  50%  { opacity:0.9; }
   100% { opacity:0; }
 }
 
@@ -61,7 +61,7 @@ body {
   background: url('/images/start/ceres-station-start.png') no-repeat center top;
   background-size: cover;
   min-width: 1px;
-  height: 100%;
+  height: 877px;
   position: relative;
   background-color: #0d0d0d;
   overflow: hidden;
@@ -108,7 +108,7 @@ body {
   left: 0;
   right: 0;
   animation-name: flicker-animation;
-  animation-duration: 3s;
+  animation-duration: 3.6s;
   animation-iteration-count: infinite;
 }
 
@@ -140,19 +140,6 @@ body {
   #SECTION - #Start
 
 ---------------------------------*/
-
-/* Backdrop
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.backdrop__section--ceres-station {
-  background: url('/images/start/ceres-station-start.png') no-repeat center top;
-  background-size: cover;
-  min-width: 1px;
-  height: 100%;
-  position: relative;
-  background-color: #0d0d0d;
-  overflow: hidden;
-}
 
 /* Samus
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
