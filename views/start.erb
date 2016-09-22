@@ -1,5 +1,7 @@
 <section class="backdrop__section backdrop__section--ceres-station ">
-  <%= erb :_new_game %>
+  <form class="invite__form" action="/newgame" method="GET">
+    <input class="invite__input" type="submit" value="<%= session[:invite] %>">
+  </form>
   <div class="samus__div"></div>
   <div class="elevator__div"></div>
 </section>

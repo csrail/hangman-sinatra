@@ -21,6 +21,7 @@ end
 get '/start' do
   session[:game_state] = ""
   session[:wait_screen] = ""
+  session[:secret_word] = ""
   session[:invite] = "PRESS START"
   erb :start
 end
@@ -31,6 +32,7 @@ get '/newgame' do
   session[:guesses_left] = 7
   session[:correct_guess_history] = []
   session[:incorrect_guess_history] = []
+  session[:response] = ""
   redirect to('/')
 end
 

@@ -1,5 +1,8 @@
 <p class="game-state__paragraph"><%= session[:game_state] %></p>
+<p class="secret-word__paragraph"><%= session[:secret_word].join %></p>
 <figure class="<%= session[:wait_screen] %>">
+  
+  
   <form class="invite__form" action="/newgame" method="GET">
     <input class="invite__input" type="submit" value="<%= session[:invite] %>">
   </form>

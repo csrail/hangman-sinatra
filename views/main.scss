@@ -103,18 +103,31 @@ body {
 
 /*---------------------------------
 
-  #FORM - Start
+  #FORM - Game State
 
 ---------------------------------*/
 
-/* Press Start
+/* Game-State
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .game-state__paragraph {
   background-color: transparent;
   position: relative;
-  top: 10%;
   text-align: center;
+  top: 2em;
   color: red;
+  text-shadow: 2px 2px #333;
+  font-size: 2em;
+  font-family: press-start;
+  line-height: 1.2em;
+  z-index: 2;
+}
+
+.secret-word__paragraph {
+  background-color: transparent;
+  position: relative;
+  text-align: center;
+  top: 2.4em;
+  color: #ff4444;
   text-shadow: 2px 2px #333;
   font-size: 2em;
   font-family: press-start;
