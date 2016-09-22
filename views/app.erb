@@ -1,29 +1,56 @@
-<%= session[:response] %>
-
-
 <% if @secret_word %>
-  <form class="" action="/" method="POST">
-    <label for="guess">Player Guess:</label>
-    <input autofocus type="text" name="guess">
-    <input type="submit" value="Guess!">
-  </form>
+  <p class="lives-left__paragraph">
+    <span class="lives-left__span">LIVES:</span>
+    <% session[:guesses_left].times.each do  %>
+      <img src="/images/game/samus__icon.png" alt="life"/>  
+    <% end %>  
+  </p>
 
-  <p><%= @secret_word %></p> 
-  <p><%= @result_display %></p>
-  <p>Correct Guess History: <%= @correct_guess_history %></p>
-  <p>Incorrect Guess History: <%= @incorrect_guess_history %></p>
-  <p><%= session[:guesses_left] %></p>
+  <article class="incorrect-history__article">
+    <p>MISS:</p>  
+    <p><%= @incorrect_guess_history.join(",  ") %></p>
+  </article>
+
+  <p><%= @secret_word.join %></p> 
+  
+  <section class="fight-scene__section">
+    <article class="samus__article">
+      <div class="samus__div--image"></div>
+    </article>
+    
+    
+    <article class="boss__article">
+      <div class="boss__div--image"></div>
+      <div class="boss-life-bar__div">
+        <% @result_display.select{|l| ("a".."z").include? l }.length.times.each do %>
+          <div class="boss-max-life__div"></div>
+        <% end %>
+        
+        <% @result_display.select{|l| l=="_"}.length.times.each do %>
+          <div class="boss-life-left__div"></div>
+        <% end %>  
+      </div>
+    </article>
+  </section>
+  
+  <p class="display__paragraph"><%= @result_display.join(" ") %></p>
+    
+  <form class="guess__form" action="/" method="POST">
+    <label class="guess__label" for="guess">L0CK 0N:</label>
+    <input autofocus class="guess__input" type="text" name="guess">
+    <input class="guess__input--submit" type="submit" value="FIRE!">
+  </form>
+  
 <% end %>
 
-<% if @guesses_left == 0 %>
-  <p>You lose!</p>
-  <form class="" action="/newgame" method="GET">
-    <input type="submit" value="Play Again?">
-  </form>
-<% elsif @secret_word == @result_display %>
-  <p>You win!</p>
-  <form class="" action="/newgame" method="GET">
-    <input type="submit" value="Play Again?">
-  </form>
-<% end %>
 
+<article class="response__article">
+  <% if session[:response] != "" %>
+    <p class="response__paragraph--metroid-gif"></p>
+  <% end %>
+  
+  <p class="response__paragraph">
+    <%= session[:response] %>
+  </p>  
+</article>
+  

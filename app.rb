@@ -35,7 +35,7 @@ get '/newgame' do
 end
 
 post '/' do
-  session[:guess] = params[:guess]
+  session[:guess] = params[:guess].downcase
   
   variables
   validate_input

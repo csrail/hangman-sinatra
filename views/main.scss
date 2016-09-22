@@ -25,7 +25,6 @@ body {
 }
 
 
-
 /*---------------------------------
 
   #UILITY
@@ -182,4 +181,189 @@ body {
   min-width: 1px;
   height: 80%;
   margin-top: 5%;
+}
+
+
+
+
+
+/*---------------------------------
+
+  #GAME -
+
+---------------------------------*/
+/* Player
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.main__section {
+  overflow: hidden;
+  background: url('/images/game/ceres__background.png') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Player
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.lives-left__paragraph {
+  text-align: center;
+  margin-top: 0.6em;
+  margin-left: 0.6em;
+  font-family: press-start;
+  color: #aaa;
+}
+
+.lives-left__span {
+  display: block;
+}
+
+
+/* Miss - incorrect_guess_history
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.incorrect-history__article {
+  text-align: center;
+  margin-top: 0.6em;
+  margin-left: 0.6em;
+  font-family: press-start;
+  color: #ada;
+}
+
+
+
+/* Samus
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fight-scene__section {
+  overflow: hidden;
+  text-align: center;
+}
+
+
+
+// /* Samus
+//   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+// .samus__div--image {
+//   float: left;
+//   display: inline-block;
+//   background: url('/images/game/samus__sprite.png') no-repeat;
+//   background-position: center;
+//   background-size: contain;
+//   width: 80px;
+//   height: 80px;
+//   background-color: red;
+//   position: relative;
+//   bottom: 0;
+// }
+
+
+/* Boss
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.boss__article {
+  margin-bottom: 2em;
+}
+
+.boss__div--image {
+  margin-top: 10px;
+  display: inline-block;
+  background: url('/images/game/boss.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 160px;
+  height: 100px;
+  margin-left: 22px;
+}
+  
+.boss-life-bar__div {
+  display: inline-block;
+  position: relative;
+  background-color: #555;
+}
+
+.boss-max-life__div {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+}
+
+.boss-life-left__div {
+  width: 13px;
+  height: 13px;
+  margin: 4px;
+  background-color: gold;
+}
+
+/* Boss
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.response__article {
+  display: flex;
+  align-items: center;
+}
+
+
+
+  
+/* Display
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.display__paragraph {
+  text-align: center;
+  letter-spacing: -0.4em;
+  font-family: press-start;
+  color: red;
+}
+
+
+/* Guess
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.guess__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: press-start;
+  margin-top: 2em;
+}
+
+.guess__label {
+  color: #e5e5e5;
+  margin-right: 1em;
+}
+
+.guess__input {
+  width: 20px;
+  height: 20px;
+}
+
+.guess__input--submit {
+  cursor: crosshair;
+  margin-left: 1em;
+}
+
+
+
+/* Response
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.response__article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+  
+.response__paragraph {
+  display: inline-block;
+  color: green;
+  font-family: press-start;
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+  
+.response__paragraph--metroid-gif {
+  display: inline-block;
+  background: url('/images/game/metroid.gif') no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 60px;
 }
